@@ -10,7 +10,7 @@ export default function Routes() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name='Welcome' component={Welcome} />
+                <Stack.Screen name='Welcome' component={Welcome} options={{header: () => null}}/>
                 <Stack.Screen name='Login' component={Login} />
                 <Stack.Screen name='ListSchools' component={ListSchool} />
 
