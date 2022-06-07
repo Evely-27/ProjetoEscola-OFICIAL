@@ -4,7 +4,7 @@ import { View, Text } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { stylesG } from "../../../assets/style/stylesGlobal";
 
-export default function Inicio(){
+export default function Welcome(){
     const navi = useNavigation();
     return (
         <View style={stylesG.background}>
