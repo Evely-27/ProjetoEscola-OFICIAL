@@ -5,6 +5,8 @@ import * as Animatable from 'react-native-animatable'
 
 export default function Welcome () {
     const navigati = useNavigation();
+    const oppenLogin = () =>{ navigati.navigate('Login' as never)};
+
     return (
         <View style={stylest.container}>
 
@@ -19,7 +21,7 @@ export default function Welcome () {
             </View>
 
             <Animatable.View  delay={700}animation='fadeInUp' style={stylest.containerForm}>
-                <TouchableOpacity style={stylest.button}>
+                <TouchableOpacity style={stylest.button}  onPress ={ oppenLogin}>
                     <Text  style={stylest.buttonText}>Sou Conselheiro</Text>
                 </TouchableOpacity> 
 
