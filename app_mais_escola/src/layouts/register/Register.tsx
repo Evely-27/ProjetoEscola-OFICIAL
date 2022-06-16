@@ -28,7 +28,7 @@ export default function Register() {
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styleL.buttonCancel} onPress ={() =>{ navi.navigate('Login' as never)}}>
-                    <Text style={styleL.buttonText}>Cancelar</Text>
+                    <Text style={styleL.buttonTextC}>Cancelar</Text>
                 </TouchableOpacity>
 
 
@@ -82,18 +82,25 @@ const styleL = StyleSheet.create({
         marginLeft: 20,
 
     },
+    buttonText:{
+        color: "#ffffff",
+        fontSize:18,
+        fontWeight: 'bold',
+
+    },
     buttonCancel:{
-        backgroundColor: 'red',
-        width:'60%',
+        backgroundColor: '#fff',
+        width:'90%',
         borderRadius: 4,
         paddingVertical: 8,
         marginTop: 20,
         alignItems: 'center',
         justifyContent: 'center',
-        marginLeft: 80,
+        marginLeft: 20,
+        border: 'solid'
     },
-    buttonText:{
-        color: "#ffffff",
+    buttonTextC:{
+        color: "#0400CD",
         fontSize:18,
         fontWeight: 'bold',
 
