@@ -21,7 +21,7 @@ export default function Welcome () {
             </View>
 
             <Animatable.View  delay={700}animation='fadeInUp' style={stylest.containerForm}>
-                <TouchableOpacity style={stylest.button}  onPress ={ oppenLogin}>
+                <TouchableOpacity style={stylest.button}  onPress ={oppenLogin}>
                     <Text  style={stylest.buttonText}>Sou Conselheiro</Text>
                 </TouchableOpacity> 
 
