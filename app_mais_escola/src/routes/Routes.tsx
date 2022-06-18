@@ -5,6 +5,7 @@ import ListSchool from '../layouts/list_schools/ListSchool';
 import Welcome from '../layouts/welcome/Welcome';
 import Register from '../layouts/register/Register';
 import Login from '../layouts/login/Login';
+import ReportStudent from '../layouts/report_student/ReportStudent';
 
 export default function Routes() {
     const Stack = createStackNavigator();
@@ -15,6 +16,7 @@ export default function Routes() {
                 <Stack.Screen name='Login' component={Login} options={{header: () => null}} />
                 <Stack.Screen name= 'Register' component={Register} options={{header: () => null}} />
                 <Stack.Screen name='ListSchool' component={ListSchool} options={{header: () => null}}  />
+                <Stack.Screen name='ReportStudent' component={ReportStudent} options={{header: () => null}}/>
 
             </Stack.Navigator>
         </NavigationContainer>

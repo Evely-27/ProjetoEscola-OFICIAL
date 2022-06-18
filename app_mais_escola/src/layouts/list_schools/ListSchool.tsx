@@ -4,11 +4,13 @@ import { AntDesign } from '@expo/vector-icons';
 import PostSchools from "../../components/PostSchools";
 import axios from "axios";
 import { Feather } from '@expo/vector-icons'; 
-import { RouteProp, useRoute } from "@react-navigation/native";
+import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { ParametrosDasRotas } from "../../class/ParametrosDasRotas";
 
 
 export default function ListSchool(){
+    const navi = useNavigation();
+    const oppenReportStudent = () =>{ navi.navigate('ReportStudent' as never )};
 
     const routes = useRoute<RouteProp<ParametrosDasRotas, "ListSchool" >>();
     const [posts, setPosts] = useState<any[]>([]);
@@ -42,7 +44,7 @@ export default function ListSchool(){
 
                     <Text style={styles.textcons}>Conselheiro {routes.params?.nome}</Text>
 
-                    <AntDesign name="notification" size={30} color="white" style={styles.icontfeather} />
+                    <AntDesign name="notification" size={30} color="white" style={styles.icontfeather} onPress={oppenReportStudent}/>
 
                 </View>
 
