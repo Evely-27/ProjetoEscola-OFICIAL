@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, FlatList, TouchableOpacity, StyleSheet, TextInput } from "react-native";
+import { View, Text, FlatList, StyleSheet, TextInput } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 import PostSchools from "../../components/PostSchools";
 import axios from "axios";
@@ -40,10 +40,9 @@ export default function ListSchool(){
                 <View style={styles.feather}>
                     <Feather name="menu" size={30} color="white" />
 
-                    <Text>Nome do conselhiro</Text>
-                    <Text>Olá {routes.params?.email}</Text>
+                    <Text style={styles.textcons}>Conselheiro {routes.params?.nome}</Text>
 
-                    <Text>Botão Reportar</Text>
+                    <AntDesign name="notification" size={30} color="white" style={styles.icontfeather} />
 
                 </View>
 
@@ -57,9 +56,9 @@ export default function ListSchool(){
             </View>
 
             <View style={styles.headerlist}>
-                <Text>RPA</Text>
-                <Text>Escolas</Text>
-                <Text>Quant.Alunos</Text>
+                <Text style={styles.textheaderlist}>RPA</Text>
+                <Text style={styles.textheaderlist}>Escolas</Text>
+                <Text style={styles.textheaderlist}>Quant.Alunos</Text>
             </View>
 
 
@@ -86,8 +85,17 @@ const styles = StyleSheet.create ({
         flexDirection: "row",
         justifyContent:'space-between',
         paddingVertical: 10,
-        border: 'solid',
+        paddingHorizontal: 6,
         backgroundColor: '#267DFF',
+    },
+    icontfeather:{
+        paddingRight:5,
+        marginEnd:3,
+    },
+    textcons:{
+        fontSize: 25,
+        fontWeight: '500',
+        color: '#fff',
     },
     flat:{
         backgroundColor: '#fff',
@@ -124,11 +132,16 @@ const styles = StyleSheet.create ({
         borderBottomWidth: 1,
         justifyContent: "space-between",
         flexDirection: 'row',
-        paddingHorizontal: 30,
-        paddingVertical: 30,
+        paddingHorizontal: 20,
+        paddingVertical: 15,
         paddingBottom:30,
         
     },
+    textheaderlist:{
+        fontSize: 18,
+        color: 'black',
+    }
+
 }
     
 )
