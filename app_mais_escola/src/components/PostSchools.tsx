@@ -5,19 +5,12 @@ import ClassEscolas from "../class/ClassEscolas";
 export default function PostSchools(props: { postSc: ClassEscolas }) {
     return (
         <View style={styles.container}>
-
                 
-            <View style={styles.contflat}>
-
-                
-                <TouchableOpacity style={styles.bot}>
-                    <Text>{props.postSc.nomeEscola}</Text>
-                    <Text>{props.postSc.rpa}</Text>
-                    <Text>{props.postSc.quantAlun}</Text>
-
-                </TouchableOpacity>
-
-            </View>
+            <TouchableOpacity style={styles.bot}>
+                    <Text style={styles.textbotlist}>{props.postSc.rpa}</Text>
+                    <Text style={styles.textbotlist}>{props.postSc.escola}</Text>
+                    <Text style={styles.textbotlist}>{props.postSc.qtd_alunos}</Text>
+                </TouchableOpacity> 
 
         </View>
     );
@@ -26,26 +19,25 @@ export default function PostSchools(props: { postSc: ClassEscolas }) {
 const styles = StyleSheet.create ({
     container:{
         flex: 1,
-        backgroundColor: '#14efdd',
- 
-    },
-    contflat:{
-        flex: 2,
-        border: 'solid',
-        marginTop: 3,
-        backgroundColor: '#bece10',
     },
     bot:{
         marginTop: 20,
         height: 50,
-        width:'80%',
-        borderRadius: 12,
-        backgroundColor: '#fff',
+        width:'90%',
+        borderRadius: 13,
+        backgroundColor: '#267DFF',
+        flex: 1,
         justifyContent: "space-between",
+        flexDirection: 'row',
         paddingHorizontal: 15,
+        paddingVertical: 15,
         alignContent: 'center',
-        flexDirection: 'row'
-    }
+        marginLeft: 10,
+        marginRight: 10,
+    },
+    textbotlist:{
+        color: '#fff',
+    },
 }
     
 )
