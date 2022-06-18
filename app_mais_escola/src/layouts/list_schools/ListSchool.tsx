@@ -42,7 +42,7 @@ export default function ListSchool(){
                 <View style={styles.feather}>
                     <Feather name="menu" size={30} color="white" />
 
-                    <Text style={styles.textcons}>Conselheiro {routes.params?.nome}</Text>
+                    <Text style={styles.textcons}>{routes.params?.nome}</Text>
 
                     <AntDesign name="notification" size={30} color="white" style={styles.icontfeather} onPress={oppenReportStudent}/>
 
