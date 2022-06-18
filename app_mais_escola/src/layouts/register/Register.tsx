@@ -36,7 +36,7 @@ export default function Register() {
                 />
 
                 <Text style={styleL.title}>Senha</Text>
-                <TextInput placeholder="Crie uma senha." style={styleL.input}
+                <TextInput placeholder="Crie uma senha." style={styleL.input} secureTextEntry={true}
                 />
 
                 <TouchableOpacity style={styleL.button} onPress ={ oppenListSchool}>
