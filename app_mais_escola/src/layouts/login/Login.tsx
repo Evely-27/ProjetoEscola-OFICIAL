@@ -23,7 +23,11 @@ export default function Login() {
                 />
 
                 <Text style={styleL.title}>Senha</Text>
-                <TextInput placeholder="Sua Senha" style={styleL.input}  onChangeText={(text) => { user.senha = text; }}
+                <TextInput placeholder="Sua Senha" 
+                style={styleL.input}  
+                onChangeText={(text) => { user.senha = text; }} 
+                secureTextEntry={true}
+
                 />
 
                 <TouchableOpacity style={styleL.button} onPress ={oppenListSchool}>
