@@ -1,17 +1,33 @@
-import { useNavigation } from "@react-navigation/native";
-import React from "react";
+import {  useNavigation } from "@react-navigation/native";
+import React, { useState } from "react";
 import { StyleSheet, Text,View , TextInput, TouchableOpacity } from "react-native";
 import * as Animatable from 'react-native-animatable';
+import { User } from "../../class/User";
+
 
 export default function Register() {
     const navi = useNavigation();
+    const oppenLogin = () =>{ navi.navigate('Login' as never, )};
+    const oppenListSchool = () =>{ navi.navigate('ListSchool' as never,user as never)};
 
+    const [user, setUser] = useState<User>(new User("",""));
+
+
+    
     return (
         <View style={styleL.container}>
             <Animatable.View animation="fadeInLeft" delay={500} style={styleL.containerHeader}>
                 <Text style={styleL.message}>Faça seu cadastro!</Text>
             </Animatable.View>
             <Animatable.View animation="fadeInUp" style={styleL.containerForm}>
+
+            <Text style={styleL.title}>Nome</Text>
+                <TextInput placeholder="Como gostaria de ser chamado(a)?" 
+                onChangeText={(text) => { user.nome = text; }} 
+                onFocus={()=> {console.log("Em foco ...");}}
+                style={styleL.input}
+                />
+                
                 <Text style={styleL.title}>Email</Text>
                 <TextInput placeholder="Digita seu email de conselheiro(a)" style={styleL.input}
                 />
@@ -23,11 +39,11 @@ export default function Register() {
                 <TextInput placeholder="Crie uma senha." style={styleL.input}
                 />
 
-                <TouchableOpacity style={styleL.button} onPress ={() =>{ navi.navigate('Login' as never)}}>
+                <TouchableOpacity style={styleL.button} onPress ={ oppenListSchool}>
                     <Text style={styleL.buttonText}>Cadastrar</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styleL.buttonCancel} onPress ={() =>{ navi.navigate('Login' as never)}}>
+                <TouchableOpacity style={styleL.buttonCancel} onPress ={ oppenLogin}>
                     <Text style={styleL.buttonTextC}>Cancelar</Text>
                 </TouchableOpacity>
 

@@ -1,13 +1,16 @@
 import { useNavigation } from '@react-navigation/native';
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text,View , TextInput, TouchableOpacity } from "react-native";
 import * as Animatable from 'react-native-animatable';
+import { User } from '../../class/User';
 
 
 export default function Login() {
     const navition = useNavigation();
     const oppenListSchool = () =>{ navition.navigate('ListSchool' as never)};
     const oppenLRegister = () =>{ navition.navigate('Register' as never)};
+
+    const [user,setUser] = useState<User>(new User("",""));
 
     return (
         <View style={styleL.container}>
@@ -16,11 +19,11 @@ export default function Login() {
             </Animatable.View>
             <Animatable.View animation="fadeInUp" style={styleL.containerForm}>
                 <Text style={styleL.title}>Email</Text>
-                <TextInput placeholder="Digita seu email" style={styleL.input}
+                <TextInput placeholder="Digita seu email" style={styleL.input} onChangeText={(text) => { user.email = text;}}
                 />
 
                 <Text style={styleL.title}>Senha</Text>
-                <TextInput placeholder="Sua Senha" style={styleL.input}
+                <TextInput placeholder="Sua Senha" style={styleL.input}  onChangeText={(text) => { user.senha = text; }}
                 />
 
                 <TouchableOpacity style={styleL.button} onPress ={oppenListSchool}>
