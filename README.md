@@ -33,4 +33,11 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 <p align="center">Copyright © 2022 +Escola</p>
 
+## Rodar a aplicação:
 
+* Use dois terminais, um para a aplicação mobile e outro para a aplicação back-end
+* No terminal da pasta app_mais_escola do projeto rode: npm install
+* No terminal da pasta "server" rode: npm install
+* Verifique o IP do seu computador "ipconfig" em um terminal a parte. Substitua as ocorrências de chamadas da API no projeto mobile para iniciarem pelo seu ip, exemplo:  fetch('http://192.168.18.70:3000/report;
+* Execute o projeto mobile no terminal da pasta app_mais_escola do projeto rode: expo start
+*Leia o QR Code gerado com o app Expo Go (https://apps.apple.com/br/app/expo-go/id982107779 ou https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pt_BR&gl=US)
