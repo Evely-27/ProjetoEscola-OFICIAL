@@ -6,11 +6,15 @@ import axios from "axios";
 import { Feather } from '@expo/vector-icons'; 
 import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { ParametrosDasRotas } from "../../class/ParametrosDasRotas";
+import { FontAwesome5 } from '@expo/vector-icons';
+
 
 
 export default function ListSchool(){
     const navi = useNavigation();
-    const oppenReportStudent = () =>{ navi.navigate('ReportStudent' as never )};
+    // const oppenReportStudent = () =>{ navi.navigate('ReportStudent' as never )};
+    const oppenListReport = () =>{ navi.navigate('ListReports' as never )};
+    
 
     const routes = useRoute<RouteProp<ParametrosDasRotas, "ListSchool" >>();
     const [posts, setPosts] = useState<any[]>([]);
@@ -43,8 +47,8 @@ export default function ListSchool(){
                     <Feather name="menu" size={30} color="white" />
 
                     <Text style={styles.textcons}>{routes.params?.nome}</Text>
+             <FontAwesome5 name="list-alt" size={30} color="white" style={styles.icontfeather} onPress={oppenListReport}/>
 
-                    <AntDesign name="notification" size={30} color="white" style={styles.icontfeather} onPress={oppenReportStudent}/>
 
                 </View>
 
@@ -54,7 +58,7 @@ export default function ListSchool(){
 
                     <TextInput placeholder="Pequise" placeholderTextColor='black' style={styles.inptPesq}
                      />
-                    <AntDesign name="search1" size={24} color="black"  onPress={() => console.log("fui clicado...")}  style={styles.icon}/>
+                    <AntDesign name="search1" size={24} color="black"  style={styles.icon}/>
             </View>
 
             <View style={styles.headerlist}>

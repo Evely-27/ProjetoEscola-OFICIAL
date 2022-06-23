@@ -19,6 +19,7 @@ export default function ReportStudent() {
             <FormReportStudent></FormReportStudent>
 
             <View style={styles.bottons}>
+                
                 <BottonForm nome="Enviar"></BottonForm>
                 <BottonForm nome="Cancelar"></BottonForm>
 
