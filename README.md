@@ -24,7 +24,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 * Kaynã Ferreira Vitorino da Silva
 * Lucas Rodrigues Melo
 * Mariana de Souza Vieira da Silva
-* Marcos Maia
 ## Modelagem do Sistema:
 * Diagrama de caso de uso
 ![Diagramas](screenshots/Diagrama.de.classe.Equipe3.jpeg "Diagram de Classe")
